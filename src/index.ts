@@ -1,3 +1,5 @@
+import { CUSTOM_PATH, GH_PAGES_URL } from "./constants";
+
 addEventListener("fetch", (event: FetchEvent) => {
   event.respondWith(handleRequest(event.request));
 });
@@ -9,11 +11,11 @@ async function handleRequest(request: Request): Promise<Response> {
     url.pathname = url.pathname.slice(0, url.pathname.length - 1);
   }
 
-  if (url.pathname.startsWith("/prototypes/")) {
-    url.pathname = url.pathname.replace("/prototypes/", "/");
+  if (url.pathname.startsWith(CUSTOM_PATH)) {
+    url.pathname = url.pathname.replace(CUSTOM_PATH, "/");
   }
 
-  const targetURL = "https://nisshi-dev.github.io" + url.pathname;
+  const targetURL = GH_PAGES_URL + url.pathname;
 
   return fetch(targetURL);
 }
