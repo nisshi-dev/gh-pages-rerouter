@@ -1,0 +1,16 @@
+{
+  "name": "gh-pages-rerouter",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230518.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.31.1",
+    "wrangler": "3.0.1"
+  },
+  "private": true,
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "vitest"
+  }
+}
