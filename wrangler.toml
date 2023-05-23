@@ -2,5 +2,6 @@ name = "gh-pages-rerouter"
 main = "src/index.ts"
 compatibility_date = "2023-05-23"
 routes = [
+  { pattern = "nisshi.dev", custom_domain = true },
   { pattern = "https://nisshi.dev/prototypes/*", zone_name = "nisshi.dev" }
 ]
